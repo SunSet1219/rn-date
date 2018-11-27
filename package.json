@@ -1,0 +1,106 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "react-native-dates@git+https://github.com/P-develper927wm/reactnativedate.git",
+        "scope": null,
+        "escapedName": "react-native-dates",
+        "name": "react-native-dates",
+        "rawSpec": "git+https://github.com/P-develper927wm/reactnativedate.git",
+        "spec": "git+https://github.com/P-develper927wm/reactnativedate.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:P-develper927wm/reactnativedate.git",
+          "sshUrl": "git+ssh://git@github.com/P-develper927wm/reactnativedate.git",
+          "httpsUrl": "git+https://github.com/P-develper927wm/reactnativedate.git",
+          "gitUrl": "git://github.com/P-develper927wm/reactnativedate.git",
+          "shortcut": "github:P-develper927wm/reactnativedate",
+          "directUrl": "https://raw.githubusercontent.com/P-develper927wm/reactnativedate/master/package.json"
+        }
+      },
+      "/Users/mobile/Documents/WEB/crackapp_center"
+    ]
+  ],
+  "_from": "git+https://github.com/P-develper927wm/reactnativedate.git",
+  "_id": "react-native-dates@2.0.4",
+  "_inCache": true,
+  "_location": "/react-native-dates",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "react-native-dates@git+https://github.com/P-develper927wm/reactnativedate.git",
+    "scope": null,
+    "escapedName": "react-native-dates",
+    "name": "react-native-dates",
+    "rawSpec": "git+https://github.com/P-develper927wm/reactnativedate.git",
+    "spec": "git+https://github.com/P-develper927wm/reactnativedate.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:P-develper927wm/reactnativedate.git",
+      "sshUrl": "git+ssh://git@github.com/P-develper927wm/reactnativedate.git",
+      "httpsUrl": "git+https://github.com/P-develper927wm/reactnativedate.git",
+      "gitUrl": "git://github.com/P-develper927wm/reactnativedate.git",
+      "shortcut": "github:P-develper927wm/reactnativedate",
+      "directUrl": "https://raw.githubusercontent.com/P-develper927wm/reactnativedate/master/package.json"
+    }
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git+https://github.com/P-develper927wm/reactnativedate.git#b59b260c8e61897e1fdc5ded20ae967a0d49cb58",
+  "_shasum": "11c5732cdbbaad3cf4ab1bd84f33385e3b088123",
+  "_shrinkwrap": null,
+  "_spec": "react-native-dates@git+https://github.com/P-develper927wm/reactnativedate.git",
+  "_where": "/Users/mobile/Documents/WEB/crackapp_center",
+  "author": {
+    "name": "We're in"
+  },
+  "bugs": {
+    "url": "https://github.com/werein/react-native-dates/issues"
+  },
+  "dependencies": {
+    "moment": "^2.17.1",
+    "moment-range": "2.2.0"
+  },
+  "description": "Date and daterange picker for React Native (iOS and Android)",
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.17.1",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.0",
+    "flow-bin": "^0.41.0"
+  },
+  "gitHead": "b59b260c8e61897e1fdc5ded20ae967a0d49cb58",
+  "homepage": "https://github.com/werein/react-native-dates#readme",
+  "keywords": [
+    "react",
+    "react",
+    "native",
+    "datepicker",
+    "calendar",
+    "daterange",
+    "picker"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "name": "react-native-dates",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "react": "^15.3.2",
+    "react-native": "^0.35.0"
+  },
+  "readme": "# React Native Dates\n[![Build Status](https://travis-ci.org/werein/react-native-dates.svg)](https://travis-ci.org/werein/react-native-dates)[![Windows Build Status](https://ci.appveyor.com/api/projects/status/github/werein/react-native-dates?branch=master&svg=true)](https://ci.appveyor.com/project/jirikolarik/react-native-dates) [![Code Climate](https://codeclimate.com/github/werein/react-native-dates/badges/gpa.svg)](https://codeclimate.com/github/werein/react-native-dates) [![Issue Count](https://codeclimate.com/github/werein/react-native-dates/badges/issue_count.svg)](https://codeclimate.com/github/werein/react-native-dates)\n\n__React Native Date and date range picker / calendar for iOS and Android__\n\n## API\n\n```javascript\ntype DatesType = {\n  range: boolean,\n  date: ?moment,\n  startDate: ?moment,\n  endDate: ?moment,\n  focusedInput: 'startDate' | 'endDate',\n  onDatesChange: (date: { date?: ?moment, startDate?: ?moment, endDate?: ?moment }) => void,\n  isDateBlocked: (date: moment) => boolean\n}\n```\n\n## Demo\n\n<img src=\"http://i.giphy.com/YUqyKQoeNs2v6.gif\">\n<img src=\"http://i.giphy.com/130cHgOE0K5TCU.gif\">\n\n\n## Example\n\nIn this example we disabled dates back in history and we shows selected dates bellow\n\n```javascript\n/**\n * Sample React Native App\n * https://github.com/facebook/react-native\n * @flow\n */\n\nimport React, { Component } from 'react';\nimport {\n  AppRegistry,\n  StyleSheet,\n  Text,\n  View\n} from 'react-native';\nimport Dates from 'react-native-dates';\nimport moment from 'moment';\n\nexport default class ReactNativeDatesDemo extends Component {\n  state = {\n    date: null,\n    focus: 'startDate',\n    startDate: null,\n    endDate: null\n  }\n\n\n  render() {\n    const isDateBlocked = (date) =>\n      date.isBefore(moment(), 'day');\n\n    const onDatesChange = ({ startDate, endDate, focusedInput }) =>\n      this.setState({ ...this.state, focus: focusedInput }, () =>\n        this.setState({ ...this.state, startDate, endDate })\n      );\n\n    const onDateChange = ({ date }) =>\n      this.setState({ ...this.state, date });\n\n\n    return (\n      <View style={styles.container}>\n        <Dates\n          onDatesChange={onDatesChange}\n          isDateBlocked={isDateBlocked}\n          startDate={this.state.startDate}\n          endDate={this.state.endDate}\n          focusedInput={this.state.focus}\n          range\n        />\n\n        <Dates\n          date={this.state.date}\n          onDatesChange={onDateChange}\n          isDateBlocked={isDateBlocked}\n        />\n\n      {this.state.date && <Text style={styles.date}>{this.state.date && this.state.date.format('LL')}</Text>}\n      <Text style={[styles.date, this.state.focus === 'startDate' && styles.focused]}>{this.state.startDate && this.state.startDate.format('LL')}</Text>\n      <Text style={[styles.date, this.state.focus === 'endDate' && styles.focused]}>{this.state.endDate && this.state.endDate.format('LL')}</Text>\n      </View>\n    );\n  }\n}\n\nconst styles = StyleSheet.create({\n  container: {\n    flex: 1,\n    flexGrow: 1,\n    marginTop: 20\n  },\n  date: {\n    marginTop: 50\n  },\n  focused: {\n    color: 'blue'\n  }\n});\n\nAppRegistry.registerComponent('ReactNativeDatesDemo', () => ReactNativeDatesDemo);\n```\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/werein/react-native-dates.git"
+  },
+  "scripts": {
+    "eslint": "eslint .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "2.0.4"
+}
